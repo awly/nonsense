@@ -1,0 +1,22 @@
+nonsense
+=======
+
+random text generator, using Markov chains
+reads arbitrary text on stdin and outputs generated nonsense to stdout
+
+trivial usage:
+
+    $ nonsense < alice.txt
+	Alice was beginning to get us dry would be very likely to eat her up in such
+	 a hurry to
+	 change the subject.
+
+	 'Ten hours the first minute
+	 or two, they began solemnly dancing round and get in at the stick,
+	 and made a snatch in the flurry of the earth. Let me see: that would happen: '"Miss Alice! Come
+	 here directly, and get ready to agree to
+	 everything that was linked
+	 into hers began to cry again, for really
+	 I'm quite tired and out of the house!' (Which was very likely true.)
+
+	 Down, down, down. Would the
