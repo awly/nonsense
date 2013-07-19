@@ -7,10 +7,11 @@ reads arbitrary text on stdin and outputs generated nonsense to stdout
 trivial usage:
 
     $ go run cli/nonsense.go < alice.txt
-	Alice was beginning to write this down on one side, to look down and looked at the end of the house if it likes.'
-		'I'd rather not,' the Cat said, waving its right ear and left foot, so as to prevent its undoing itself,) she carried it off.
-		'What a curious dream!' said Alice, in a hurried nervous manner, smiling at everything about her, to pass away the moment he was gone, and the words came very queer indeed:—
-		''Tis the voice of the March Hare.
-		'He denies it,' said Alice. 'And where HAVE my shoulders got to? And oh,
+	Alice was a little bird as soon as look at me like that!'
+		'I couldn't help it,' said the young lady to see if there are, nobody attends to them—and you've no idea how confusing it is to find my way into a conversation.
+		'You don't know what they're like.'
+		'I believe so,' Alice replied very solemnly.
+	Alice was very provoking to find her way through the wood. 'It's the Cheshire Cat, she was considering in her life, and had to leave off this minute!' She generally gave herself very good height indeed!' said the Mock Turtle's heavy sobs.
+	Lastly,
 
 there's also web interface under web/ (go run web/nonsense.go) but beware!

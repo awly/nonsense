@@ -12,12 +12,12 @@ import (
 )
 
 const (
-	DEFW = 100
-	MAXW = 1000
-	MAXB = 5 * 1 << 20
+	DEFW = 100         // default words generated
+	MAXW = 1000        // max words generated
+	MAXB = 5 * 1 << 20 // 5MB, limit for request body
 )
 
-var aliceChains nonsense.Chain
+var aliceChains nonsense.Chain // default pre-parsed chain
 
 func main() {
 	rand.Seed(time.Now().Unix())
@@ -50,6 +50,7 @@ func handler(rw http.ResponseWriter, req *http.Request) {
 		}
 	}
 
+	// get generation length from url if present, otherwise use default
 	max, err := strconv.Atoi(req.URL.Query().Get("len"))
 	if err != nil {
 		max = DEFW
