@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/captaincronos/nonsense"
+	"io"
 	"log"
 	"math/rand"
 	"net/http"
@@ -13,6 +14,7 @@ import (
 const (
 	DEFW = 100
 	MAXW = 1000
+	MAXB = 5 * 1 << 20
 )
 
 var aliceChains nonsense.Chain
@@ -41,7 +43,7 @@ func handler(rw http.ResponseWriter, req *http.Request) {
 	c := aliceChains
 	if req.Body != nil && req.ContentLength > 0 {
 		var err error
-		c, err = nonsense.Build(req.Body)
+		c, err = nonsense.Build(io.LimitReader(req.Body, MAXB))
 		if err != nil {
 			log.Println(err)
 			return

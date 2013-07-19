@@ -46,19 +46,28 @@ func Build(in io.Reader) (Chain, error) {
 // Gen: using given c, write random text to out, space-separated
 // user is responsible for seeding PRNG from math/rand
 func (c Chain) Gen(out io.Writer, max int) error {
-	var next string    // next word to be written
+	var next string // next word to be written
+	var si int
 	var p prefix       // current prefix
 	for i := range p { // initialize "empty" prefix
 		p[i] = naw
 	}
 	var err error
 	for i := 0; i < max; i++ {
-		next = c[p][rand.Intn(len(c[p]))] // get random suffix for given prefix
+		si = rand.Intn(len(c[p]))
+		next = c[p][si] // get random suffix for given prefix
 		if next == naw {
 			break
 		}
-		if _, err = fmt.Fprint(out, next, " "); err != nil {
+		if _, err = fmt.Fprint(out, next); err != nil {
 			return err
+		}
+		// append space if not after \n
+		// can't just modify next, since p.advance will fail
+		if len(next) > 0 && next[len(next)-1] != '\n' {
+			if _, err = fmt.Fprint(out, " "); err != nil {
+				return err
+			}
 		}
 		p.advance(next)
 	}
