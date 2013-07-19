@@ -6,9 +6,11 @@ reads arbitrary text on stdin and outputs generated nonsense to stdout
 
 trivial usage:
 
-    $ nonsense < alice.txt
+    $ go run cli/nonsense.go < alice.txt
 	Alice was beginning to write this down on one side, to look down and looked at the end of the house if it likes.'
 		'I'd rather not,' the Cat said, waving its right ear and left foot, so as to prevent its undoing itself,) she carried it off.
 		'What a curious dream!' said Alice, in a hurried nervous manner, smiling at everything about her, to pass away the moment he was gone, and the words came very queer indeed:—
 		''Tis the voice of the March Hare.
 		'He denies it,' said Alice. 'And where HAVE my shoulders got to? And oh,
+
+there's also web interface under web/ (go run web/nonsense.go) but beware!
